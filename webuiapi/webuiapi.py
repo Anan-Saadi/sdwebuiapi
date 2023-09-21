@@ -274,6 +274,8 @@ class WebUIApi:
         sampler_index=None,  # deprecated: use sampler_name
         use_deprecated_controlnet=False,
         use_async=False,
+        refiner_checkpoint=None,
+        refiner_switch_at=0,
     ):
         if sampler_index is None:
             sampler_index = self.default_sampler
@@ -411,6 +413,8 @@ class WebUIApi:
         controlnet_units: List[ControlNetUnit] = [],
         use_deprecated_controlnet=False,
         use_async=False,
+        refiner_checkpoint=None,
+        refiner_switch_at=0,
     ):
         if sampler_name is None:
             sampler_name = self.default_sampler
